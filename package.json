@@ -62,6 +62,7 @@
   },
   "scripts": {
     "test": "zap",
+    "build": "cake build",
     "coverage": "nyc npm test && nyc report",
     "coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
   },
