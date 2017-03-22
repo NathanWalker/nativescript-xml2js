@@ -56,11 +56,14 @@
   ],
   "main": "./lib/xml2js",
   "files": [
-    "lib"
+    "lib",
+    "index.d.ts",
+    "processors.d.ts"
   ],
   "directories": {
     "lib": "./lib"
   },
+  "typings": "index.d.ts",
   "scripts": {
     "tsc": "tsc",
     "test": "zap",
