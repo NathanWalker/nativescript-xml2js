@@ -1,4 +1,4 @@
-node-xml2js
+nativescript-xml2js (based on node-xml2js)
 ===========
 
 Ever had the urge to parse XML? And wanted to access the data in some sane,
@@ -18,11 +18,9 @@ Note: If you're looking for a full DOM parser, you probably want
 Installation
 ============
 
-Simplest way to install `xml2js` is to use [npm](http://npmjs.org), just `npm
-install xml2js` which will download xml2js and all dependencies.
+Simplest way to install `nativescript-xml2js` is to use [npm](http://npmjs.org), just `npm
+install --save nativescript-xml2js` which will download xml2js and all dependencies.
 
-xml2js is also available via [Bower](http://bower.io/), just `bower install
-xml2js` which will download xml2js and all dependencies.
 
 Usage
 =====
@@ -37,14 +35,14 @@ You want to parse XML as simple and easy as possible? It's dangerous to go
 alone, take this:
 
 ```javascript
-var parseString = require('xml2js').parseString;
+var parseString = require('nativescript-xml2js').parseString;
 var xml = "<root>Hello xml2js!</root>"
 parseString(xml, function (err, result) {
     console.dir(result);
 });
 ```
 
-Can't get easier than this, right? This works starting with `xml2js` 0.2.3.
+Can't get easier than this, right? This works starting with `nativescript-xml2js` 0.2.3.
 With CoffeeScript it looks like this:
 
 ```coffeescript
@@ -54,7 +52,7 @@ parseString xml, (err, result) ->
     console.dir result
 ```
 
-If you need some special options, fear not, `xml2js` supports a number of
+If you need some special options, fear not, `nativescript-xml2js` supports a number of
 options (see below), you can specify these as second argument:
 
 ```javascript
@@ -70,7 +68,7 @@ wrapper, this was added in 0.1.11 just for you:
 
 ```javascript
 var fs = require('fs'),
-    xml2js = require('xml2js');
+    xml2js = require('nativescript-xml2js');
 
 var parser = new xml2js.Parser();
 fs.readFile(__dirname + '/foo.xml', function(err, data) {
@@ -83,13 +81,13 @@ fs.readFile(__dirname + '/foo.xml', function(err, data) {
 
 Look ma, no event listeners!
 
-You can also use `xml2js` from
+You can also use `nativescript-xml2js` from
 [CoffeeScript](https://github.com/jashkenas/coffeescript), further reducing
 the clutter:
 
 ```coffeescript
 fs = require 'fs',
-xml2js = require 'xml2js'
+xml2js = require 'nativescript-xml2js'
 
 parser = new xml2js.Parser()
 fs.readFile __dirname + '/foo.xml', (err, data) ->
@@ -101,7 +99,7 @@ fs.readFile __dirname + '/foo.xml', (err, data) ->
 But what happens if you forget the `new` keyword to create a new `Parser`? In
 the middle of a nightly coding session, it might get lost, after all. Worry
 not, we got you covered! Starting with 0.2.8 you can also leave it out, in
-which case `xml2js` will helpfully add it for you, no bad surprises and
+which case `nativescript-xml2js` will helpfully add it for you, no bad surprises and
 inexplicable bugs!
 
 Parsing multiple files
@@ -147,7 +145,7 @@ Since 0.4.0, objects can be also be used to build XML:
 
 ```javascript
 var fs = require('fs'),
-    xml2js = require('xml2js');
+    xml2js = require('nativescript-xml2js');
 
 var obj = {name: "Super", Surname: "Man", age: 23};
 
@@ -353,13 +351,13 @@ the default settings for version 0.2, so these settings can be tried before the
 migration.
 
 ```javascript
-var xml2js = require('xml2js');
+var xml2js = require('nativescript-xml2js');
 var parser = new xml2js.Parser(xml2js.defaults["0.2"]);
 ```
 
 To get the 0.1 defaults in version 0.2 you can just use
 `xml2js.defaults["0.1"]` in the same place. This provides you with enough time
-to migrate to the saner way of parsing in `xml2js` 0.2. We try to make the
+to migrate to the saner way of parsing in `nativescript-xml2js` 0.2. We try to make the
 migration as simple and gentle as possible, but some breakage cannot be
 avoided.
 
@@ -387,7 +385,7 @@ We also have a number of unit tests, they can be run using `npm test` directly
 from the project root. This runs zap to discover all the tests and execute
 them.
 
-If you like to contribute, keep in mind that `xml2js` is written in
+If you like to contribute, keep in mind that `nativescript-xml2js` is written in
 CoffeeScript, so don't develop on the JavaScript files that are checked into
 the repository for convenience reasons. Also, please write some unit test to
 check your behaviour and if it is some user-facing thing, add some
@@ -398,9 +396,9 @@ Getting support
 
 Please, if you have a problem with the library, first make sure you read this
 README. If you read this far, thanks, you're good. Then, please make sure your
-problem really is with `xml2js`. It is? Okay, then I'll look at it. Send me a
+problem really is with `nativescript-xml2js`. It is? Okay, then I'll look at it. Send me a
 mail and we can talk. Please don't open issues, as I don't think that is the
 proper forum for support problems. Some problems might as well really be bugs
-in `xml2js`, if so I'll let you know to open an issue instead :)
+in `nativescript-xml2js`, if so I'll let you know to open an issue instead :)
 
 But if you know you really found a bug, feel free to open an issue instead.
