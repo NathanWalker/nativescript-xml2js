@@ -78,6 +78,7 @@
     "url": "https://github.com/essent/nativescript-xml2js.git"
   },
   "dependencies": {
+    "events": "~1.1.1",
     "sax": ">=0.6.0",
     "xmlbuilder": "^8.2.0"
   },
