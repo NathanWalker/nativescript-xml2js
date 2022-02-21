@@ -4,7 +4,6 @@ sax = require 'sax'
 events = require 'events'
 bom = require './bom'
 processors = require './processors'
-setImmediate = require('timer').setTimeout
 defaults = require('./defaults').defaults
 
 # Underscore has a nice function for this, but we try to go without dependencies
@@ -45,7 +44,7 @@ class exports.Parser extends events.EventEmitter
         chunk = @remaining.substr 0, @options.chunkSize
         @remaining = @remaining.substr @options.chunkSize, @remaining.length
         @saxParser = @saxParser.write chunk
-        setImmediate @processAsync
+        setTimeout @processAsync
     catch err
       if ! @saxParser.errThrown
         @saxParser.errThrown = true
@@ -243,7 +242,7 @@ class exports.Parser extends events.EventEmitter
       str = bom.stripBOM str
       if @options.async
         @remaining = str
-        setImmediate @processAsync
+        setTimeout @processAsync
         return @saxParser
       @saxParser.write(str).close()
     catch err

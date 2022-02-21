@@ -6,7 +6,7 @@
     "json"
   ],
   "homepage": "https://github.com/essent/nativescript-xml2js",
-  "version": "0.5.2",
+  "version": "1.0.0",
   "author": "Marek Kubica <marek@xivilization.net> (https://xivilization.net)",
   "contributors": [
     "maqr <maqr.lollerskates@gmail.com> (https://github.com/maqr)",
@@ -67,6 +67,7 @@
   },
   "typings": "index.d.ts",
   "scripts": {
+    "clean": "npx rimraf node_modules package-lock.json yarn.lock && npm i",
     "tsc": "tsc",
     "test": "zap",
     "build": "cake build",
@@ -78,19 +79,19 @@
     "url": "https://github.com/essent/nativescript-xml2js.git"
   },
   "dependencies": {
-    "events": "~1.1.1",
-    "sax": ">=0.6.0",
-    "xmlbuilder": "^8.2.0"
+    "events": "~3.3.0",
+    "sax": ">=1.2.0",
+    "xmlbuilder": "^15.1.1"
   },
   "devDependencies": {
-    "@types/node": "^7.0.8",
-    "coffee-script": ">=1.10.0",
-    "coveralls": "^2.11.2",
-    "diff": ">=1.0.8",
-    "docco": ">=0.6.2",
-    "nyc": ">=2.2.1",
-    "typescript": "~2.0.10",
-    "zap": ">=0.2.9"
+    "@types/node": "^16.0.0",
+    "coffee-script": ">=1.12.0",
+    "coveralls": "^3.1.1",
+    "diff": ">=5.0.0",
+    "docco": ">=0.9.0",
+    "nyc": ">=15.1.0",
+    "typescript": "~4.5.5",
+    "zap": "0.2.9"
   },
   "license": "MIT"
 }
